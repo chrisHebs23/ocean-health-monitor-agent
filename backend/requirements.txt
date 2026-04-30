@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain
+langchain-google-genai
+langgraph
+langchain-core
+httpx
+supabase
+python-dotenv
+apscheduler
