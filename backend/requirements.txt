@@ -8,3 +8,4 @@ httpx
 supabase
 python-dotenv
 apscheduler
+python-dotenv
