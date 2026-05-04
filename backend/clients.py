@@ -2,7 +2,7 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from supabase import create_client, Client
 from dotenv import load_dotenv
-from models import AgentState
+from models import ReportCreate
 
 load_dotenv()
 
@@ -12,4 +12,4 @@ supabase: Client = create_client(url, key)
 
 model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash-lite", temperature=1.0
-).with_structured_output(AgentState)
+).with_structured_output(schema=ReportCreate.model_json_schema(), method="json_schema")

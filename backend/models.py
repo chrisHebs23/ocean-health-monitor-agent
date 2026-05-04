@@ -34,17 +34,3 @@ class ReportResponse(BaseModel):
     sea_surface_temp: Optional[float] = None
     source: str
     created_at: datetime
-
-
-# ── FastAPI request body for manual trigger ─────────────────
-class RunRequest(BaseModel):
-    locations: Optional[list[str]] = None  # if None run all 4
-
-
-class AgentState(BaseModel):
-    messages: Annotated[list, add_messages]
-    location: str
-    source: str
-    report: Optional[str]
-    alert_level: Optional[str]
-    sea_surface_temp: Optional[float]
